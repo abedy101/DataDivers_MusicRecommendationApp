@@ -1,5 +1,5 @@
-# Data Divers Music Recommendation App
-The GitHub respository for Data Divers: Music Recommendation App capstone project
+# Data Divers: Music Recommendation App
+The GitHub respository for the Data Divers: Music Recommendation App capstone project
 
 Uploaded documents:
 Kick-Off Meeting PowerPoint 
