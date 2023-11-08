@@ -16,6 +16,7 @@ Most of the work has been done without constantly uploading to GitHub. We will c
 Uploaded documents:
 Kick-Off Meeting PowerPoint, MVP PowerPoint
 
+## **MVP**
 To run the project:
 
 Front-end:
