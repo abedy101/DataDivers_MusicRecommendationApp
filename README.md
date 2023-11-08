@@ -23,7 +23,8 @@ Front-end:
 
 Back-end:
 
-Requirements: Flask, Pandas, Numpy, Flask-CORS, Pickle
+Requirements: Flask, Pandas, Numpy, Flask-CORS, Pickle, sci-kit learn
+
 To run:
 * python flask_NN.py
 
