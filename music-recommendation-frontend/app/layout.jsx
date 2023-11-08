@@ -2,7 +2,7 @@
 import Navbar from '@/components/navbar'
 import { ChakraProvider } from '@chakra-ui/react'
 export const metadata = {
-  title: 'Playlist Recommender',
+  title: 'RecNN',
   description: 'Recommend the playlist based on the songs you search',
 }
 

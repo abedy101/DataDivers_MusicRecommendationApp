@@ -15,7 +15,7 @@ function MusicCard(props) {
 
     return (
     <>
-        <Card pointerEvents='auto' onClick={handleItemClick()}>
+        <Card pointerEvents='auto' cursor={'pointer'} onClick={handleItemClick(item)}>
             <CardBody>
                 <Image 
                     maxW={150}

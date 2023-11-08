@@ -7,6 +7,11 @@ const nextConfig = {
             destination: '/home',
             permanent: true,
           },
+          {
+            source: '/api/server/:path*',
+            destination: 'http://127.0.0.1:5000/:path*',
+            permanent: true
+          },
         ]
       },
 }

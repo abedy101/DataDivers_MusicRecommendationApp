@@ -8,6 +8,7 @@ function SearchBar(props) {
   const handleItemClick = (item) => {
     return (e) => {
       if (typeof onItemClick === "function") {
+        
         onItemClick(item);
       }
     };

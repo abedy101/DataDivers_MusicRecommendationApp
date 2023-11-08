@@ -17,7 +17,7 @@ export default function Home() {
   const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {
-    fetch("/api/trending", { method: "GET" })
+    fetch("/api/local/trending", { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
         setTrendingList(data);
@@ -25,25 +25,7 @@ export default function Home() {
   });
 
   const handleItemClick = (item) => {
-    router.push("/recommendation");
-  };
-
-  const handleInputChange = async (item) => {
-    if(item.length >= 3) {
-      try {
-        const response = await fetch("/api/search/" + item + "/20/1", {
-          method: "GET",
-        });
-        if (response.ok) {
-          const data = await response.json();
-  
-          setSearchResult(data)
-        }
-      } catch (error) {}
-    }else {
-      setSearchResult([])
-    }
-
+    router.push("/recommendation/" + item.track_id);
   };
 
   return (

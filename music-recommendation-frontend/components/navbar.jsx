@@ -26,14 +26,14 @@ function Navbar() {
   const handleItemClick = (item) => {
     setSearchResult([])
     setSearchTerm('')
-    router.push("/recommendation");
+    router.push("/recommendation/" + item.track_id);
   };
 
   const handleInputChange = async (item) => {
     setSearchTerm(item)
     if(item.length >= 3) {
       try {
-        const response = await fetch("/api/search/" + item + "/20/1", {
+        const response = await fetch("/api/local/search/" + item + "/20/1", {
           method: "GET",
         });
         if (response.ok) {
