@@ -1,8 +1,12 @@
 # Data Divers: Music Recommendation App
 The GitHub respository for the Data Divers: Music Recommendation App capstone project
 
+Application name: RecNN
+
+Reasoning: Portmanteau of Recommendation + Nearest Neighbours and a play on reckoning. Since we're calculating or estimating recommendations for a particular song, we feel this is perfect.
+
 Uploaded documents:
-Kick-Off Meeting PowerPoint 
+Kick-Off Meeting PowerPoint, MVP PowerPoint
 
 Tech Lead: Andrew Mark Dale || 100491442<br />
 Team Member: Abednego Ndegwa || 100941581<br />
