@@ -6,10 +6,11 @@ import { Box, Flex, Heading, List, Text, Image } from '@chakra-ui/react'
 import React from 'react'
 
 function Recommendation() {
+
   return (
     <Box width='100%' p={8}>
         <Box width='70%' alignItems={'center'} >
-        <SearchBar/>
+        {/* <SearchBar /> */}
         
         <Flex direction={'column'} mt={8} gap={'6'}>
             {/* 
@@ -22,7 +23,7 @@ function Recommendation() {
             <Image 
                     maxW={150}
                     maxh={150}
-                    src='/default_musci.png'
+                    src='/default_music.png'
              />
 
 

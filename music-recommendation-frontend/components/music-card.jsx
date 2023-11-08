@@ -3,11 +3,19 @@ import React from 'react'
 
 function MusicCard(props) {
 
-    const {track_id, artist, track, genre, pop, } = props
+    const {track_id, artist, track, genre, pop, item, onItemClick } = props
+
+    const handleItemClick = (item) => {
+        return (e) => {
+          if (typeof onItemClick === "function") {
+            onItemClick(item);
+          }
+        };
+      };
 
     return (
     <>
-        <Card pointerEvents='auto'>
+        <Card pointerEvents='auto' onClick={handleItemClick()}>
             <CardBody>
                 <Image 
                     maxW={150}

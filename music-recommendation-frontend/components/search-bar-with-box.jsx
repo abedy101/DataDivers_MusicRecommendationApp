@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Input, Box, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Input, Box, InputGroup, InputLeftElement, Divider, Flex } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 
 function SearchBar(props) {
-  const { onInputChange, onItemClick, searchResult } = props;
-  const [searchTerm, setSearchTerm] = useState("");
+  const { onInputChange, onItemClick, searchResult, searchTerm } = props;
 
   const handleItemClick = (item) => {
     return (e) => {
@@ -15,16 +14,15 @@ function SearchBar(props) {
   };
 
   const handleSearch = async (event) => {
-    const searchTerm = event.target.value;
-    setSearchTerm(searchTerm);
+    // setSearchTerm(searchTerm);
 
     if (typeof onInputChange === "function") {
-      onInputChange(searchTerm);
+      onInputChange(event.target.value);
     }
   };
 
   return (
-    <Box position={"relative"}>
+    <Box position={"relative"} >
       <InputGroup w="100%">
         <InputLeftElement pointerEvents={"none"}>
           <SearchIcon color="gray.300" mt="2" />
@@ -48,12 +46,15 @@ function SearchBar(props) {
           borderColor={"gray.300"}
           rounded={"md"}
           width="100%"
+          maxHeight={'xl'}
+          overflowY={'scroll'}
           mt={4}
           zIndex={9}
           backgroundColor="white"
           boxShadow="md"
         >
           {searchResult.map((result) => (
+            <Flex direction={'column'} gap={'2'}>
             <Box
               key={result.track_id}
               p={2}
@@ -62,6 +63,8 @@ function SearchBar(props) {
             >
               {result.track}
             </Box>
+            <Divider/>
+            </Flex>
           ))}
         </Box>
       )}

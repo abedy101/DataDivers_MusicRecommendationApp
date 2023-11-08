@@ -56,15 +56,15 @@ export default function Home() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Box w="60%">
+          {/* <Box w="40%">
             <SearchBar
               onItemClick={handleItemClick}
               onInputChange={handleInputChange}
               searchResult={searchResult}
             />
-          </Box>
+          </Box> */}
 
-          <Box w="70%" marginTop={8}>
+          <Box w="65%" marginTop={8}>
             <Flex
               direction={"column"}
               alignItems={"start"}
@@ -80,6 +80,8 @@ export default function Home() {
                     track={item["track"]}
                     genre={item["genre"]}
                     pop={item["pop"]}
+                    item={item}
+                    onItemClick={handleItemClick}
                   />
                 ))}
               </Wrap>
